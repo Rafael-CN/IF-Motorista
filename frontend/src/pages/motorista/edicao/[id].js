@@ -1,6 +1,7 @@
 import api from "@/services/api";
 import Router from "next/router";
 import { useEffect, useState } from "react";
+import styles from "../../../styles/Form.module.css";
 
 export default function Edicao() {
 	const [id, setId] = useState(0);
@@ -50,8 +51,8 @@ export default function Edicao() {
 
 	return (
 		<>
-			<h3>Edição de motoristas</h3>
-			<form onSubmit={handleSubmit}>
+			<h2 className={styles.title}>Edição de motoristas</h2>
+			<form className={styles.form} onSubmit={handleSubmit}>
 				<p>
 					<label htmlFor="cpf">CPF: </label>
 					<input

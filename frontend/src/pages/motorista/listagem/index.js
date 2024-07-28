@@ -1,6 +1,7 @@
 import api from "@/services/api";
 import Router from "next/router";
 import { useEffect, useState } from "react";
+import styles from "../../../styles/List.module.css";
 
 export default function Listagem() {
 	const [motoristas, setMotoristas] = useState([]);
@@ -36,11 +37,11 @@ export default function Listagem() {
 
 	return (
 		<>
-			<h3>Listagem de motoristas</h3>
-			<div>
+			<h2 className={styles.title}>Listagem de motoristas</h2>
+			<div className={styles.list}>
 				{motoristas?.length > 0 &&
 					motoristas.map((m) => (
-						<div>
+						<div className={styles.item}>
 							<p>{m.nome}</p>
 							<span>{m.cpf}</span>
 							<button type="button" onClick={() => editarMotorista(m.id)}>

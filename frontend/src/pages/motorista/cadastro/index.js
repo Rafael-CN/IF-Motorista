@@ -1,5 +1,6 @@
 import api from "@/services/api";
 import Router from "next/router";
+import styles from "../../../styles/Form.module.css";
 
 export default function Cadastro() {
 	const handleSubmit = (e) => {
@@ -27,8 +28,8 @@ export default function Cadastro() {
 
 	return (
 		<>
-			<h3>Cadastro de motoristas</h3>
-			<form onSubmit={handleSubmit}>
+			<h2 className={styles.title}>Cadastro de motoristas</h2>
+			<form className={styles.form} onSubmit={handleSubmit}>
 				<p>
 					<label htmlFor="cpf">CPF: </label>
 					<input type="text" id="cpf" name="cpf" required />

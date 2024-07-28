@@ -1,0 +1,40 @@
+.title {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	gap: 30px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+	padding: 25px 15px;
+	background-color: #343a50;
+	border-radius: 10px;
+	color: #c7cade;
+}
+
+.item p {
+	font-weight: 700;
+}
+
+.item span {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.item button {
+	background-color: #c7cade;
+	color: #343a50;
+	font-weight: 600;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 0;
+	cursor: pointer;
+}
